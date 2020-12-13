@@ -1209,20 +1209,20 @@ if __name__ == "__main__":
                     y + lineh/2.0 + more_h,
                     linew, lineh]
                 # top left + bottom right
-                textbox = np.array([x1, y1 - h, x1 + w, y1], dtype="float32")
-                textbox_pad = np.array([
-                    textbox[0] - padding,
-                    textbox[1] - padding,
-                    textbox[2] + padding,
-                    textbox[3] + padding], dtype="float32")
-                cv2.rectangle(frame_data,
-                              (textbox_pad[0], textbox_pad[1]),
-                              (textbox_pad[2], textbox_pad[3]),
-                              color=(255, 255, 255),
-                              thickness=-1)
-                cv2.putText(frame_data, act_labels, (textbox[0], textbox[3]),
-                            font, font_scale, color=(0, 0, 255),
-                            thickness=font_thickness)
+#                 textbox = np.array([x1, y1 - h, x1 + w, y1], dtype="float32")
+#                 textbox_pad = np.array([
+#                     textbox[0] - padding,
+#                     textbox[1] - padding,
+#                     textbox[2] + padding,
+#                     textbox[3] + padding], dtype="float32")
+#                 cv2.rectangle(frame_data,
+#                               (textbox_pad[0], textbox_pad[1]),
+#                               (textbox_pad[2], textbox_pad[3]),
+#                               color=(255, 255, 255),
+#                               thickness=-1)
+#                 cv2.putText(frame_data, act_labels, (textbox[0], textbox[3]),
+#                             font, font_scale, color=(0, 0, 255),
+#                             thickness=font_thickness)
 
                 # draw a circle around the possible meeting locations?
                 """
